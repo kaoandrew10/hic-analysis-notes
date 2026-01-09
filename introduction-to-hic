@@ -1,0 +1,13 @@
+### Introduction to HiC
+High-throughput chromatin confirmation (Hi-C) is a process that captures the 3D genome architecture of a given sample. 
+The assay interactions between loci that were previously distal, which would be impossible to infer from linear sequencing reads alone. 
+
+The typical steps of the assay include: 
+  1. Crosslinking with a small percentage of formaldehyde to preserve genome architecture.
+  2. Chromatin is cut with a restriction enzyme(s).
+  3. Areas cut by restriction enzymes are ligated together, joining areas that are close to each other in physical space.
+  4. A biotinylated nucleotide is added to the ligation junctions.
+  5. Proximally ligated undergoes DNA fragmentation as preparation for standard NGS workflow. 
+  5. Streptavidin beads are used to enrich for biotinylated proximally ligated DNA.
+  6. Enriched library sequenced, and the original location of proximally ligated fragments is identified. 
+  7. Results can be analyzed visually to reveal the 3D genome architecture of TADs, compartments, and chromatin loops.
