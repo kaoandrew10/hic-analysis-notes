@@ -1,0 +1,21 @@
+## Common steps necessary for HiC data analysis
+
+## Generating SSH key
+  ## An SSH key is like a fingerprint for your computer that is commonly used to safely access remote servers. Due to the large amount of storage and computational power needed for Hi-       C analysis, an SSH key will likely be needed at some point during the process
+## Open terminal
+    ssh - keygen
+  ## You will be prompted to create a passphrase, which isn't necessary unless you want additional security. 
+  ## You will be prompted to provide a location to save the key. I recommend accepting the default location. 
+  ## The location of your key will usually follow "/Users/user-name/.ssh" 
+  ## Most institutions will need you to provide your public ssh key (usually id_rsa.pub) to access their remote server.
+
+    
+## Connect to HPC cluster via SSH
+  ## Hi-C data analysis can require a large number of threads, memory, and time. It is usually necessary to connect to your institution's HPC cluster. Example command below
+    sftp -i ~/.ssh/"private_key_file_name" "username"
+  ## Download fastq files
+      ## Command for downloading from Basespace
+      bs download project -n "run name" -o "directory you want to download the files into"
+      ## Downloading from remote server
+      cd "directory you want to download your files into" 
+      get -r "name of file you want to download"
